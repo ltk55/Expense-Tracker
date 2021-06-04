@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Dashboard from "./components/dashboard/Dashboard";
-import ExpenseDetails from "./components/expenses/ExpenseDetails";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import CreateExpense from "./components/expenses/CreateExpense";
+import "materialize-css/dist/css/materialize.min.css";
 
 class App extends Component {
   render() {
@@ -15,7 +15,6 @@ class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Dashboard} />
-            <Route path="/expense/:id" component={ExpenseDetails} />
             <Route path="/signin" component={SignIn} />
             <Route path="/signup" component={SignUp} />
             <Route path="/create" component={CreateExpense} />
